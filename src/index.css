@@ -15,6 +15,10 @@ body{
 .pageActive{
   color: #40A944;
 }
+::selection {
+  background-color: #7b1fa2;
+  color: white;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

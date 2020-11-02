@@ -316,23 +316,3 @@ class ShopLeftRight extends React.Component {
 }
 
 export default ShopLeftRight;
-{/* <div style={{display:'flex',justifyContent:'space-between'}}>
-<div>
-    <button className='btn btn-link'><img src={Dot6} alt='not found'></img></button>
-    <button className='btn btn-link'><img src={Dot12} alt='not found'></img></button>
-    <button className='btn btn-link'><img src={Gach3} alt='not found'></img></button>
-</div>
-<div>
-    <select className='form-control' style={{ width: '268px', fontSize: '15px' }}>
-        <option value="1">Sort by average rating</option>
-        <option value="2">Sort by popularity</option>
-        <option value="3">Sort by newness</option>
-        <option value="4">Sort by price: low to high</option>
-        <option value="4">Sort by price: high to low</option>
-        <option value="4">Product Name: Z</option>
-    </select>
-</div>
-<div>
-    <p>Showing 1–9 of 21 results</p>
-</div>
-</div> */}

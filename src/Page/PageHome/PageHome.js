@@ -11,6 +11,7 @@ import OurBlog from '../../component/Our Blog/index'
 import Feature from '../../component/Featured Products/index'
 import Footer from '../../component/Footer/index'
 import CartStore from '../../component/CartStore/index'
+import ScrollIndicator from '../../common/ScrollPage';
 
 
 
@@ -32,8 +33,9 @@ class App extends React.Component {
   render() {
     return (
       <div style={{ overflow: 'hidden' }}>
-
+          
           {<Header />}
+          <ScrollIndicator/>
           {<Slide />}
           {<CartStore />}
           {<Contact />}

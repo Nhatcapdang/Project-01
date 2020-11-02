@@ -3,6 +3,7 @@ import './style.scss'
 import { connect } from 'react-redux'
 import * as action from '../../Actions/index'
 import Tooltip from '../Tooltip/Tooltip'
+import { toastWarn} from '../../common/toastify'
 
  class MostView extends React.Component {
     // constructor(props){
@@ -21,6 +22,7 @@ import Tooltip from '../Tooltip/Tooltip'
     addItem=(Array)=>{
     
         this.props.addItem(Array);
+        toastWarn();
     }   
     render() {
         var { itemMostView }=this.props;

@@ -2,6 +2,8 @@ import React from 'react';
 import Footer from '../../component/Footer/index'
 import Header from '../../component/Header';
 import GoogleMap from '../../component/ContactGgMap';
+import AnimationFigma from '../../component/AnimationFigma/index'
+import Contact_TellUs from '../../component/Contact_TellUs';
 
 
 
@@ -12,7 +14,9 @@ class Contact extends React.Component {
     return (
       <div style={{ overflow: 'hidden' }}>
         <Header />
-        <GoogleMap/>
+        <AnimationFigma />
+        <GoogleMap />
+        <Contact_TellUs />
         {<Footer />}
       </div>
     );

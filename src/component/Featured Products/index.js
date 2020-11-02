@@ -3,7 +3,7 @@ import './StyleFeature.scss';
 import * as action from '../../Actions/index'
 import { connect } from 'react-redux'
 import Tooltip from '../Tooltip/Tooltip'
-
+import { toastError} from '../../common/toastify'
 class Feature extends React.Component {
 
     // constructor(props) {
@@ -21,6 +21,7 @@ class Feature extends React.Component {
 
 addItem=(Array)=>{
     this.props.addItem(Array)
+    toastError()
 }
 
     render() {

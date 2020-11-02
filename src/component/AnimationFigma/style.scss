@@ -1,0 +1,61 @@
+.animation{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+  height: 100vh;
+  background: #4AC29A;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #BDFFF3, #4AC29A);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #BDFFF3, #4AC29A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  margin-top: 50px;
+}
+
+.can-chinh{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    width: 100%;
+}
+  .logo1{
+    animation:fill-white 0.3s ease forwards 3.5s;
+  }
+  
+  .logo1 path{
+    stroke-dasharray:  800;
+    stroke-dashoffset: 800;
+    animation: line-anim 2s ease forwards;
+  }
+  .logo2{
+    animation:fill-white 0.3s ease forwards 3.5s;
+  }
+  
+  .logo2 path{
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: line-anim 2s ease forwards 1s;
+  }
+  .logo3{
+    animation:fill-white 0.3s ease forwards 3.5s;
+  }
+  
+  .logo3 path{
+    stroke-dasharray:  800;
+    stroke-dashoffset: 800;
+    animation: line-anim 2s ease forwards 2s;
+  }
+  @keyframes line-anim{
+    to{
+      stroke-dashoffset: 0;
+    }
+  }
+  @keyframes fill-white{
+    from{
+      fill:transparent;
+    }
+    to{
+      fill:white;
+    }
+  }

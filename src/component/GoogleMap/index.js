@@ -23,7 +23,6 @@ class GoogleMap extends React.Component {
                     <SimpleMap />
                 </div>
 
-
             </div>
         );
     }

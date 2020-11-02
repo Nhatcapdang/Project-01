@@ -3,6 +3,7 @@ import './Style.scss'
 import { connect } from 'react-redux'
 import * as action from '../../Actions/index'
 import Tooltip from  '../Tooltip/Tooltip'
+import { toastSuccess} from '../../common/toastify'
 class Deals extends React.Component {
     // constructor(props) {
     //     super(props);
@@ -53,7 +54,7 @@ class Deals extends React.Component {
     //     }
     // }
     addItem=(Array)=>{
-    
+        toastSuccess();
      this.props.addItem(Array);
     }
 

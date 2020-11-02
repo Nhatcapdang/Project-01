@@ -4,7 +4,7 @@ import BS from '../../img/bs.jpg'
 import { connect } from 'react-redux'
 import * as action from '../../Actions/index'
 import Tooltip from '../Tooltip/Tooltip'
-
+import { toastInfo} from '../../common/toastify'
 
 
 
@@ -13,6 +13,7 @@ class BestSellers extends React.Component {
     addItem = (Array) => {
 
         this.props.addItem(Array);
+        toastInfo()
     }
     render() {
         var element = this.props.BestSellers[0].map((array, index) => {
