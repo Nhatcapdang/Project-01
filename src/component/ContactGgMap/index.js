@@ -22,7 +22,7 @@ class GoogleMap extends React.Component {
                 <div className='pt-5' style={{ width: '100%', height: '400px' }}>
                     <SimpleMap />
                 </div>
-
+                
             </div>
         );
     }

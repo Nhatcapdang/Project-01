@@ -20,7 +20,7 @@ class Header extends React.Component {
                                 <ul className='d-flex m-0 p-0 menuChinh' style={{ listStyle: 'none' }}>
                                     <li  style={{ lineHeight: '50px', width: '80px', textAlign: 'center' }}><Link to='/' style={{ textDecoration: 'none', display: 'block' }}>Home<span className="fas fa-angle-down" style={{ position: 'relative', top: '1px', left: '4px' }}></span></Link>
                                         <ul className='menuPhu'>
-                                            <li><a href='/'>Home Shop </a></li>
+                                            <li><a href='/'>Home Shop 1</a></li>
                                             <li><a href='/'>Home Shop 2</a></li>
                                             <li><a href='/'>Home Shop 3</a></li>
                                             <li><a href='/'>Home Shop 4</a></li>
