@@ -6,7 +6,8 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "google-map-react": "^1.1.7",
+    "caniuse-lite": "^1.0.30001154",
+    "google-map-react": "^2.1.9",
     "react-easy-swipe": "0.0.18",
     "react-range": "^1.6.7",
     "react-redux": "^7.2.0",
@@ -27,7 +28,11 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "settings": {
+      "react": {
+        "version": "999.999.999"
+      }
+    }
   },
   "browserslist": {
     "production": [
@@ -40,5 +45,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "node-sass": "^4.14.1"
   }
 }
