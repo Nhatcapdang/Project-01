@@ -9,6 +9,7 @@ import Shop from '../Page/Shop/Shop'
 import Blog from '../Page/Blogs/PageBlogs'
 import Contact from '../Page/Contacts/Contacts';
 import NotFound from '../Page/NotFound/NotFound';
+import PageLogin from './PageLogin/PageLogin';
 
 
 class Direction extends React.Component {
@@ -29,11 +30,12 @@ class Direction extends React.Component {
                     <Route path="/contact">
                         <Contact />
                     </Route>
+                    <Route path="/login">
+                        <PageLogin />
+                    </Route>
                     <Route>
                         <NotFound />
                     </Route>
-
-
                 </Switch>
             </Router>
         );

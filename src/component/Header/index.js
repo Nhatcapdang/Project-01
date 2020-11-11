@@ -61,7 +61,7 @@ class Header extends React.Component {
                         <div className='col-lg-3 col-md-3 col-sm-3 col-12 d-none d-md-block'>
                             <div style={{ textAlign: 'end' }}>
                                 <p className='m-0'><i className="fas fa-mobile" style={{ color: '/40a944', position: 'relative', top: '0px', left: '-5px' }}></i>037 7871 681</p>
-                                <p className='m-0'>Customer Support</p>
+                                <p className='m-0'><Link to="login">Login</Link></p>
                             </div>
                         </div>
                     </div>
