@@ -1,9 +1,10 @@
-  
+
 import React, { useEffect, useState } from "react";
-import { useWindowScroll  } from "react-use";
+import { useWindowScroll } from "react-use";
 import './ScrollStyle.scss'
 
 const ScrollIndicator = () => {
+    //eslint-disable-next-line
     const { x, y } = useWindowScroll();
     const [scrolled, setScrolled] = useState(0);
 

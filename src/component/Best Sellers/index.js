@@ -4,7 +4,7 @@ import BS from '../../img/bs.jpg'
 import { connect } from 'react-redux'
 import * as action from '../../Actions/index'
 import Tooltip from '../Tooltip/Tooltip'
-import { toastInfo} from '../../common/toastify'
+import { toastInfo } from '../../common/toastify'
 
 
 

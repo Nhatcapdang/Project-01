@@ -76,7 +76,7 @@ class ShopLeftRight extends React.Component {
                     text4: '$245.00',
                     bgImg: 'bgImg2'
                 },
-                
+
                 {
                     id: 5,
                     text1: 'Cas Meque Metus',
@@ -274,7 +274,8 @@ class ShopLeftRight extends React.Component {
                                 <div className='col-12 mb-5'>
                                     <div style={{ padding: '10px 0px', border: '1px solid #6c6c6c' }}>
                                         <div className='row text-center'>
-                                            <div className='col-lg-3 col-12 '> <button className='btn btn-link'><img src={Dot6} alt='not found'></img></button>
+                                            <div className='col-lg-3 col-12 '>
+                                                <button className='btn btn-link'><img src={Dot6} alt='not found'></img></button>
                                                 <button className='btn btn-link'><img src={Dot12} alt='not found'></img></button>
                                                 <button className='btn btn-link'><img src={Gach3} alt='not found'></img></button></div>
                                             <div className='col-lg-4 col-12 '>
@@ -291,7 +292,7 @@ class ShopLeftRight extends React.Component {
                                     </div>
                                 </div>
                                 {/* phan 2 */}
-                                {element} {/* hien ra cac san pham*/}
+                                {element} {/*hien ra cac san pham*/}
                                 {/* pagination */}
                                 <div className='col-12'>
                                     <div className='col-12 mb-5'>
