@@ -1,0 +1,39 @@
+.cartStore{
+    .divIcon{
+        height: 60px;
+        width: 60px;
+        border-radius: 30px;
+        background-color:#40a944;
+      
+        color: white;
+    }
+    .divIcon:hover{
+        background-color:white;
+       
+        color: #40a944;
+    }
+    .product_detail{
+        padding: 3% 0%;
+    }
+    .btn_update{
+        background-color: black;
+        color: white;
+        display: block;
+        transition: 0.4s;
+       
+    }
+    .btn_update:hover{
+        background-color: #40a944;
+    }
+    .btn_sale{
+        background-color: #40a944;
+        color: white;
+        display: block;
+        transition: 0.4s;
+       
+       
+    }
+    .btn_sale:hover{
+        background-color: black;
+    }
+}

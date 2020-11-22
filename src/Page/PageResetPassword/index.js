@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../../component/Header';
 import Footer from '../../component/Footer/index'
-import ForgotPassword from "../../component/ForgotPassword"
+import ForgotPassword from "../../componentTMDT/ForgotPassword"
 
 
 

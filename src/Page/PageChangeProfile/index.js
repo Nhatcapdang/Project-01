@@ -1,7 +1,7 @@
 import React from 'react';
 import Footer from '../../component/Footer/index';
 import Header from '../../component/Header';
-import UpdateProfile from '../../component/UpdateProfile';
+import UpdateProfile from '../../componentTMDT/UpdateProfile';
 
 
 

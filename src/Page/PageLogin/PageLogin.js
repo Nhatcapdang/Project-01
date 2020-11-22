@@ -1,9 +1,10 @@
 import React from 'react';
 import Header from '../../component/Header';
 import Footer from '../../component/Footer/index'
-import Login from "../../component/Login/index"
+import Login from "../../componentTMDT/Login/index"
 import DemoFirebase from '../../component/DemoFirebase';
 import DemoAuth from '../../component/DemoFirebase/Authentication';
+import DemoRedux from '../../componentTMDT/DemoReduxHook';
 
 
 
@@ -17,6 +18,7 @@ class PageLogin extends React.Component {
                 <Login />
                 {/* <DemoFirebase />
                 <DemoAuth /> */}
+                <DemoRedux />
                 <Footer />
             </div>
         );

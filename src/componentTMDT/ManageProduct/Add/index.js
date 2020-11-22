@@ -109,6 +109,7 @@ class AddPopUp extends Component {
                         })
                         let newProduct = {
                             URLimage: URL,
+                            id: this.generateID(),
                             nameProduct: product.txtNameProduct,
                             pricesProduct: product.txtPrices,
                             selecDiscount: product.selecDiscount,
