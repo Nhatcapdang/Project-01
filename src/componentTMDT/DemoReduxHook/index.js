@@ -1,10 +1,8 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { addItemDeals, addProductToCart } from "../../Actions"
 
 export default function DemoRedux() {
     const stateCartTMDT = useSelector(state => state.CartTMDT)
-    const dispatch = useDispatch()
 
     const demoDispatch = (e) => {
         // const action = addProductToCart({

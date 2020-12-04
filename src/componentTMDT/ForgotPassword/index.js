@@ -12,8 +12,6 @@ export default function Login() {
 
     const { resetPassword } = useAuth()
     const emailRef = useRef()
-    const history = useHistory()
-    const [Error, setError] = useState()
     const [success, setSuccess] = useState("")
 
 

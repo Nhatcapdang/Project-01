@@ -1,15 +1,14 @@
-import React, { Component, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
 import {
     Link
 } from "react-router-dom";
-import Dot6 from '../../img/6dottrang.png'
-import Dot12 from '../../img/12dot.png'
-import Gach3 from '../../img/3gach.png'
-import "./style.scss"
-import Tooltip from '../../component/Tooltip/Tooltip';
-import firebase from '../../ConfigFirabase';
 import { addProductToCart } from '../../Actions';
-import { useDispatch } from 'react-redux';
+import firebase from '../../ConfigFirabase';
+import Dot12 from '../../img/12dot.png';
+import Gach3 from '../../img/3gach.png';
+import Dot6 from '../../img/6dottrang.png';
+import "./style.scss";
 
 
 
@@ -100,7 +99,7 @@ export default function SpecialOffers() {
                                 value={valueSort}
                                 onChange={e => setvalueSorte(e.target.value)}>
                                 <option >Default</option>
-                                <option value="saab">Name (A - Z)</option>
+                                <option value="A-Z">Name (A - Z)</option>
                                 <option value="opel">Name (Z - A)</option>
                                 <option value="lowHigh">Price (Low > High)</option>
                                 <option value="highLow">Price (High > Low)</option>

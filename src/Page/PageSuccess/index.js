@@ -1,9 +1,7 @@
 import React from 'react';
 import Header from '../../component/Header';
 import Footer from '../../component/Footer/index'
-import Login from "../../componentTMDT/Login/index"
-// import DemoFirebase from '../../component/DemoFirebase';
-// import DemoAuth from '../../component/DemoFirebase/Authentication';
+import Success from '../../componentTMDT/Success';
 
 
 
@@ -14,9 +12,7 @@ class PageLogin extends React.Component {
         return (
             <div style={{ overflow: 'hidden' }}>
                 <Header />
-                <Login />
-                {/* <DemoFirebase />
-                <DemoAuth /> */}
+                <Success />
                 <Footer />
             </div>
         );

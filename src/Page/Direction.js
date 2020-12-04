@@ -18,6 +18,9 @@ import { AuthProvider } from "../Contexts/AuthContext"
 import PrivateRoute from './PrivateRouter';
 import PageForgotPassword from "./PageResetPassword"
 import PageChangeProfile from "./PageChangeProfile"
+import PageCheckout from "./PageCheckout";
+import PageSuccess from "./PageSuccess";
+import PageCustomer from './PageCustomer';
 
 
 
@@ -39,6 +42,9 @@ class Direction extends React.Component {
                         <Route path="/specialoffers" component={SpecialOffers} />
                         <Route path="/manageproduct" component={PageManageProduct} />
                         <Route path="/profile" component={PageProfile} />
+                        <Route path="/checkout" component={PageCheckout} />
+                        <Route path="/success" component={PageSuccess} />
+                        <Route path="/customer" component={PageCustomer} />
                         <PrivateRoute path="/update-profile" component={PageChangeProfile} />
                         <PrivateRoute path="/" component={PageProfile} />
                         <Route component={NotFound} />

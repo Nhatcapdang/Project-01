@@ -1,0 +1,12 @@
+
+.success{
+    .btn_update{
+        background-color: black;
+        color: white;
+        transition: 0.4s;
+       letter-spacing: 3px;
+    }
+    .btn_update:hover{
+        background-color: tomato;
+    }
+}

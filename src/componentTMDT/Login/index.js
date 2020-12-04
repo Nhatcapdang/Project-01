@@ -1,11 +1,12 @@
 import React, { useRef, useState } from "react"
 import "./style.scss";
 import Login123 from "../../img/login.jpeg"
-import firebase from "../../ConfigFirabase"
+// import firebase from "../../ConfigFirabase"
 import { Link, useHistory } from "react-router-dom";
 // import { createBrowserHistory } from 'history';
 // import { History } from "react-router-dom"
 import { useAuth } from "../../Contexts/AuthContext"
+import { useSelector } from "react-redux";
 
 
 
@@ -16,17 +17,27 @@ export default function Login() {
     const passwordRef = useRef()
     const [error, setError] = useState("")
     const history = useHistory()
+    const CartTMDT = useSelector(state => state.CartTMDT)
 
 
 
 
     async function handleSubmit(e) {
         e.preventDefault()
-        try {
-            await login(emailRef.current.value, passwordRef.current.value)
-            history.push('/')
-        } catch {
-            setError("Failed to log in")
+        if (CartTMDT.productCustomerChoose.length === 0) {
+            try {
+                await login(emailRef.current.value, passwordRef.current.value)
+                history.push('/')
+            } catch {
+                setError("Failed to log in")
+            }
+        } else {
+            try {
+                await login(emailRef.current.value, passwordRef.current.value)
+                history.push('/checkout')
+            } catch {
+                setError("Failed to log in")
+            }
         }
     }
 

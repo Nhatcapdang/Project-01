@@ -49,7 +49,7 @@ class Register extends Component {
         //eslint-disable-next-line
         const regexpEmail = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
         //eslint-disable-next-line
-        const regexpPhone = /(03|07|08|09|01[2|6|8|9])+([0-9]{8})\b/;
+        const regexpPhone = /(84|0[3|5|7|8|9])+([0-9]{8})\b/;
 
         const checkingResultFristName = regexpFristName.exec(checkingFristName);
         if (checkingResultFristName !== null) {
@@ -80,7 +80,7 @@ class Register extends Component {
                 passwordError: ""
             })
         }
-        if (checkingResultEmail !== null && checkingResultFristName !== null && checkingResultLastName !== null && checkingResultPhone !== null && this.state.rlSex !== "  " && password == passwordAgain) {
+        if (checkingResultEmail !== null && checkingResultFristName !== null && checkingResultLastName !== null && checkingResultPhone !== null && this.state.rlSex !== "  " && password === passwordAgain) {
             return true    //ko hop le thi tra ve null
         } else {
             if (checkingResultFristName === null) {

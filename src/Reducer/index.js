@@ -6,6 +6,7 @@ import FearuteProduct from './FearuteProduct'
 import TrendingProduct from './TrendingProduct'
 import BestSellers from './BestSellers'
 import CartTMDT from './CartTMDT'
+import ShowHiddenOrderDetail from './ShowHiddenOrderDetail'
 
 
 var myReducer = combineReducers({
@@ -16,7 +17,8 @@ var myReducer = combineReducers({
     TrendingProduct,
     BestSellers,
     //phan nay cua TMDT
-    CartTMDT
+    CartTMDT,
+    ShowHiddenOrderDetail
 
 })
 export default myReducer;
