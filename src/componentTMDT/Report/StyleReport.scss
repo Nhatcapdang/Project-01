@@ -1,0 +1,15 @@
+.report{
+    margin-top: 70px;
+    .tag{
+        box-shadow: 0 1px 4px 0 rgba(0,0,0,.14);
+        border-radius: 5px;
+        padding: 5px 5px;
+        p{
+            color: #9c27b0;
+        }
+        h5{
+            text-align: center;
+            color: #3c4858;
+        }
+    }
+}

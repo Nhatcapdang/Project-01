@@ -31,15 +31,64 @@ export default function Checkout(props) {
             </tr>
         })
     }
-    const Delivered = () => {
-        let data = {
-            ...orderDetail,
-            status: true
+    const Delivered = (value) => {
+        if (value === "cancel") {
+            let data = {
+                ...orderDetail,
+                status: value
+            }
+            firebase.firestore().collection("customer").doc(id).update(data)
+                .then(() => {
+                    toastSuccess("Success")
+                });
+        } else {
+            let data = {
+                ...orderDetail,
+                status: true,
+                pay: "paid"
+            }
+            firebase.firestore().collection("customer").doc(id).update(data)
+                .then(() => {
+                    toastSuccess("Success")
+                });
+            //dua vao report tren firabase
+            let productSold = data.productCustomerChoose.reduce((tichLuy, next) => tichLuy + next.soLuongKHClick, 0)
+            let nameAndAmount = [];
+            data.productCustomerChoose.forEach((item) => nameAndAmount.push({
+                nam: item.nameProduct,
+                click: item.soLuongKHClick
+            }))
+            let sold = {
+                coupon: data.coupon,
+                subtotal: data.subtotal,
+                total: data.total,
+                soldProduct: productSold,
+                nameAndAmount: nameAndAmount
+            }
+            firebase.firestore().collection("report").add(sold)
+                .then(() => {
+                });
         }
-        firebase.firestore().collection("customer").doc(id).update(data)
-            .then(() => {
-                toastSuccess("Success")
-            });
+    }
+    const disableCancel = () => {
+        if (orderDetail !== null) {
+            if (orderDetail.status === true) {
+                return "d-none"
+            }
+        } else {
+            return "float-right mt-2"
+        }
+    }
+    const disableDelivered = () => {
+        if (orderDetail !== null) {
+            if (orderDetail.status === "cancel") {
+                return "d-none"
+            } if (orderDetail.status === true) {
+                return "d-none"
+            }
+        } else {
+            return "float-right mt-2"
+        }
     }
     return (
         <div className={isShowHidden ? " detailOrder detailOrder-show" : " detailOrder"} style={{ width: '100%', opacity: '0.9', zIndex: '2' }}>
@@ -91,6 +140,9 @@ export default function Checkout(props) {
                                                     <div className="form-group ">
                                                         <b>Address:</b> {orderDetail !== null ? orderDetail.addressCutomer : 0}
                                                     </div>
+                                                    <div className="form-group ">
+                                                        <b>Status pay:</b> {orderDetail !== null ? orderDetail.pay : 0}
+                                                    </div>
                                                     {/* <button type="submit" className="btn btn-primary btn_update mb-4">APPLY COUPON</button> */}
                                                     {/* <input type="submit" className="btn btn-primary btn_update mb-4" value="APPLY COUPON"></input> */}
                                                 </form>
@@ -115,11 +167,11 @@ export default function Checkout(props) {
                                                         <div className='col-6 mb-2'><b>Subtotal</b></div>
                                                         <div className='col-6 text-right'><b>${orderDetail !== null ? orderDetail.subtotal : 0}</b></div>
                                                         <div className='col-12 mb-5'>
-                                                            <div className='float-right mt-2'>
+                                                            <div className={`float-right mt-2 ${disableDelivered()}`}>
                                                                 <button type="button" onClick={() => Delivered()} className={props.khachHang === 1 ? "d-none" : "btn btn-primary btn_sale mb-4"} style={{ fontWeight: '900' }}>Delivered</button>
                                                             </div>
-                                                            <div className='float-right mt-2'>
-                                                                <button type="button" className={props.khachHang === 1 ? "d-none" : "btn btn-denger btn_sale mb-4 mr-5"} style={{ fontWeight: '900', background: 'red' }}>Cancel order</button>
+                                                            <div className={`float-right mt-2 ${disableCancel()}`}>
+                                                                <button type="button" onClick={() => Delivered("cancel")} className="btn btn-denger btn_sale mb-4 mr-5 " style={{ fontWeight: '900', background: 'red' }}>Cancel order</button>
                                                             </div>
                                                         </div>
                                                     </div>

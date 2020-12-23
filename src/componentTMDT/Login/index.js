@@ -7,6 +7,7 @@ import { Link, useHistory } from "react-router-dom";
 // import { History } from "react-router-dom"
 import { useAuth } from "../../Contexts/AuthContext"
 import { useSelector } from "react-redux";
+import SignInFB from "../SignInFB";
 
 
 
@@ -85,6 +86,7 @@ export default function Login() {
                         </div>
                     </form>
                     <p ><Link style={{ color: "tomato" }} to="/resetpassword">Forgot password ?</Link> <Link to="/register">Create an account</Link></p>
+                    <SignInFB />
                 </div>
             </div>
         </section>

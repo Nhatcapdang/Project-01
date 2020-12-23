@@ -48,7 +48,7 @@ export default function Profile() {
         var element = orderhistory.map((obj, index) => {
             const data = obj.data();
             return <div className="col-md-3" key={index} onClick={() => isShowAndHidden(obj)}>
-                <div className={data.status === true ? "profile-sidebar profile-sidebar-green" : "profile-sidebar "}>
+                <div className={data.status === true ? "profile-sidebar profile-sidebar-green" : (data.status === false ? "profile-sidebar " : "profile-sidebar profile-sidebar-orange")}>
                     {/* SIDEBAR USERPIC */}
                     <div className="profile-userpic text-center">
                         <img src="https://www.w3schools.com/howto/img_avatar2.png" className="img-responsive" alt="/" />
@@ -96,7 +96,7 @@ export default function Profile() {
         <div style={{ marginTop: "52px" }}>
             <div className="container d-flex justify-content-center">
                 <div className="card" style={{ width: 400 }}>
-                    <img className="card-img-top" src="https://i.pinimg.com/originals/d3/fe/d9/d3fed9b8d3b38f39c34b65a6d9989a5c.jpg" alt="/" />
+                    <img className="card-img-top" src={currentUser.photoURL || "https://i.pinimg.com/originals/d3/fe/d9/d3fed9b8d3b38f39c34b65a6d9989a5c.jpg"} alt="/" />
                     <div className="card-body">
                         <h4 className="card-title">{currentUser.email}</h4>
                         <p className="card-text">Some example text.</p>
@@ -108,6 +108,7 @@ export default function Profile() {
                     <div className="card-body">
                         <button className="btn btn-light mr-5"><Link to="/customer">Customer Order</Link></button>
                         <button className="btn btn-light" ><Link to="/manageproduct">Manager Product</Link></button>
+                        <button className="btn btn-light mt-2" ><Link to="/report">Report</Link></button>
                     </div>
                 </div>
             </div>

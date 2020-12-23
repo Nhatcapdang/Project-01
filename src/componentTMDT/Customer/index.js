@@ -9,6 +9,7 @@ import DetailOrder from '../DetailOrder'
 
 
 export default function Customer() {
+    const [valueSort, setvalueSorte] = useState("All")
     const [productCustomerOrder, setproductCustomerOrder] = useState(null)
     const dispatch = useDispatch()
 
@@ -27,10 +28,40 @@ export default function Customer() {
     }
 
     if (productCustomerOrder) {
-        var element = productCustomerOrder.map((obj, index) => {
+        let arrayDelivered = []
+        switch (valueSort) {
+            case "Waiting":
+                productCustomerOrder.map((obj) => {
+                    const data = obj.data();
+                    if (data.status === false) {
+                        arrayDelivered.push(obj)
+                    }
+                })
+                break;
+            case "Delivered":
+                productCustomerOrder.map((obj) => {
+                    const data = obj.data();
+                    if (data.status === true) {
+                        arrayDelivered.push(obj)
+                    }
+                })
+                break;
+            case "Cancel":
+                productCustomerOrder.map((obj) => {
+                    const data = obj.data();
+                    if (data.status === "cancel") {
+                        arrayDelivered.push(obj)
+                    }
+                })
+                break;
+            default:
+                arrayDelivered = productCustomerOrder
+                break
+        }
+        var element = arrayDelivered.map((obj, index) => {
             const data = obj.data();
             return <div className="col-md-3" key={index} onClick={() => isShowAndHidden(obj)}>
-                <div className={data.status === true ? "profile-sidebar profile-sidebar-green" : "profile-sidebar "}>
+                <div className={data.status === true ? "profile-sidebar profile-sidebar-green" : (data.status === false ? "profile-sidebar " : "profile-sidebar profile-sidebar-orange")}>
                     {/* SIDEBAR USERPIC */}
                     <div className="profile-userpic text-center">
                         <img src="https://www.w3schools.com/howto/img_avatar2.png" className="img-responsive" alt="/" />
@@ -52,6 +83,9 @@ export default function Customer() {
                         </div>
                         <div className="profile-usertitle-job">
                             Coupon: {data.coupon}%
+                        </div>
+                        <div className="profile-usertitle-job">
+                            {data.pay}
                         </div>
                     </div>
                     {/* END SIDEBAR USER TITLE */}
@@ -80,6 +114,15 @@ export default function Customer() {
                 <i class="fas fa-square text-danger">Waiting for delivery</i>
                 <i class="fas fa-square text-success ml-5 mr-5">Delivered</i>
                 <i class="fas fa-square text-warning">Cancel order</i>
+                <span className="ml-5">Show: </span>
+                <select
+                    value={valueSort}
+                    onChange={e => setvalueSorte(e.target.value)}>
+                    <option value="All">All</option>
+                    <option value="Waiting">Waiting for delivery</option>
+                    <option value="Delivered">Delivered</option>
+                    <option value="Cancel">Cancel order</option>
+                </select>
             </div>
             <div className="container customerr p-0">
                 <div className="row profile">

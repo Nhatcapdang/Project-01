@@ -73,7 +73,8 @@ export default function Checkout() {
                 subtotal: subTotal(),
                 status: false,
                 email: currentUser.email,
-                day: dayMonthYear()
+                day: dayMonthYear(),
+                pay: "not paid"
             }
             firebase.firestore().collection("customer").add(data)
                 .then(

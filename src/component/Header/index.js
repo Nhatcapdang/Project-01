@@ -83,7 +83,7 @@ function Header() {
                             <p className='m-0'><Link to="/register">Sign up</Link></p>
                         </div>
                         <div className={currentUser ? "" : "d-none"} style={{ display: "flex", alignItems: "center", padding: "5px 0" }}>
-                            <Link to="/dashboard"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu8ZGyn20iFzwh69YLQds7IJ4462yniS63s2MxwTU7w=s32-c-mo" alt="Avatar" class="avatar"></img></Link>
+                            <Link to="/dashboard"><img src={currentUser ? currentUser.photoURL : "https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png"} alt="Avatare" class="avatar"></img></Link>
                             <p className="m-0" style={{ textTransform: "capitalize" }}>{currentUser ? currentUser.email : ""} <i style={{ cursor: "pointer" }} onClick={handleLogout} className="fas fa-sign-out-alt"></i></p>
                         </div>
                     </div>

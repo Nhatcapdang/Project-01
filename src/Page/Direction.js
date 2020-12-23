@@ -21,6 +21,7 @@ import PageChangeProfile from "./PageChangeProfile"
 import PageCheckout from "./PageCheckout";
 import PageSuccess from "./PageSuccess";
 import PageCustomer from './PageCustomer';
+import PageReport from './PageReport';
 
 
 
@@ -45,6 +46,7 @@ class Direction extends React.Component {
                         <Route path="/checkout" component={PageCheckout} />
                         <Route path="/success" component={PageSuccess} />
                         <Route path="/customer" component={PageCustomer} />
+                        <Route path="/report" component={PageReport} />
                         <PrivateRoute path="/update-profile" component={PageChangeProfile} />
                         <PrivateRoute path="/" component={PageProfile} />
                         <Route component={NotFound} />
