@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react"
 import "./style.scss";
 import H3 from "../../img/h3.JPG"
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 // import { createBrowserHistory } from 'history';
 // import { History } from "react-router-dom"
 import { useAuth } from "../../Contexts/AuthContext"

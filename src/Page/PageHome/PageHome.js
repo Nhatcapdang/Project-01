@@ -12,6 +12,7 @@ import Feature from '../../component/Featured Products/index'
 import Footer from '../../component/Footer/index'
 import CartStore from '../../component/CartStore/index'
 import ScrollIndicator from '../../common/ScrollPage';
+import MenuBurger from '../../component/HeaderBurger';
 
 
 
@@ -33,7 +34,7 @@ class App extends React.Component {
   render() {
     return (
       <div style={{ overflow: 'hidden' }}>
-          
+          <MenuBurger />
           {<Header />}
           <ScrollIndicator/>
           {<Slide />}
@@ -56,7 +57,6 @@ class App extends React.Component {
           <SwipeableListItem>{fakeContent}</SwipeableListItem>
           <SwipeableListItem>{fakeContent}</SwipeableListItem>
         </SwipeableList> */}
-
       </div>
     );
   }

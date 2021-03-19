@@ -4,7 +4,6 @@ import firebase from '../../ConfigFirabase'
 
 export default function Report() {
     const [report, setreport] = useState(null)
-    const [subTotal, setsubTotal] = useState(0)
     useEffect(() => {
         firebase.firestore().collection('report').onSnapshot((snap) => {
             setreport(snap.docs)//array chua co object
