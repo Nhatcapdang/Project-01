@@ -11,6 +11,10 @@ import Direction from './Page/Direction'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ToTopPage from './common/ToTopPage';
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
+// import "bootstrap/scss/bootstrap.scss";
+
 
 
 const store = createStore(myReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
@@ -20,7 +24,9 @@ ReactDOM.render(
     <Provider store={store}>
         <ToTopPage />
         <ToastContainer autoClose={2000} />
-        <Direction />
+      <DndProvider backend={HTML5Backend}>
+            <Direction />
+            </DndProvider>
     </Provider>
     , document.getElementById('root'));
 serviceWorker.unregister();

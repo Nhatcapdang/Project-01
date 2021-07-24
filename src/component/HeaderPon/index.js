@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Style1.scss';
 import Logo from './../../img/logo.png'
 import Support from './../../img/icon-phone.png'
+import TeamSelection from '../DragAndDrop';
 
 class HeaderPon extends Component {
     constructor(props) {
@@ -162,6 +163,7 @@ class HeaderPon extends Component {
                         </div>
                     </div>
                 </div>
+                <TeamSelection/>
             </div>
         );
     }

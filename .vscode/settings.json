@@ -29,7 +29,9 @@
     "auto-close-tag.disableOnLanguage": [
     
     ],
-    "emmet.extensionsPath": "",
+    "emmet.extensionsPath": [
+        ""
+    ],
     "emmet.excludeLanguages": [
     
         "markdown"
