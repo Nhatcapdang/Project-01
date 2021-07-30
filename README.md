@@ -39,5 +39,12 @@ project
 │  └── ...
 │
 ```
+## Deployment
+
+To deploy this project run
+
+1. cd project
+2. Run ```npm install```
+3. Run ```npm start```
 
   
